@@ -3907,3 +3907,12 @@ input, select, textarea {
 			}
 
 		}
+
+
+.bigLink{
+	font-size: 1.5em;
+}
+
+.download{
+	/* text-decoration: underline; */
+}
