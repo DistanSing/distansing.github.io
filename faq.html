@@ -5,59 +5,189 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>DistanSing - FAQ</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="A Low-Latency Audio App Made for Musicians">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">DistanSing</a>
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html" class="active">Download</a></li>
-						<!-- <li><a href="elements.html">Elements</a></li> -->
-					</ul>
-				</nav>
-			</header>
+<head>
+	<title>DistanSing - FAQ</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="A Low-Latency Audio App Made for Musicians">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<body class="is-preload">
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">FAQ</h1>
-							
-						</div>
-					</section>
-		
+	<!-- Header -->
+	<header id="header">
+		<a href="index.html" class="title">DistanSing</a>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="download.html" >Download</a></li>
+				<li><a href="faq.html" class="active">FAQ</a></li>
+				<li><a href="team.html" >Team</a></li>
+
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<section id="main" class="wrapper">
+			<div class="inner">
+				<h1 class="major">FAQ</h1>
+				<h2>Topics:</h2>
+				<ul>
+					<li><a href="#installation">Installation</a></li>
+					<li><a href="#howASIO">How do I edit ASIO settings?</a></li>
+					<li><a href="#audio">I cannot hear anything/others cannot hear me.</a></li>
+					<li><a href="#whatASIO">What is ASIO?</a></li>
+					<li><a href="#whyASIO">Why is ASIO necessary?</a></li>
+				</ul>
+				<hr>
+
+				<u>
+					<h3><a id="installation" href="#installation">Installation</a></h3>
+				</u>
+				<p>DistanSing is meant to be run without any installation required. The one caveat to this is that the
+					ASIO driver "ASIO4ALL"
+					must be installed. Download ASIO
+					<strong><a href="downloads/ASIO4ALL_2_14_English.exe">HERE</a></strong>
+				</p>
+				<p><strong>(Make sure you also install the ASIO Offline Settings!)</strong></p>
+				<p><img src="images/FAQ/ASIO_OFFLINE_SETTINGS.PNG" alt="ASIO Offline Settings Installer Option"
+						data-position="center center" /></p>
+				<hr>
+
+
+				<u>
+					<h3><a id="howASIO" href="#howASIO">How do I edit ASIO settings?</a></h3>
+				</u>
+				<p>When you installed ASIO4ALL you should have checked the option to install the "ASIO4ALL Offline
+					Settings". (See <a href="#installation">here)</a></p>
+				<p>Open these settings by searching for them in your windows start menu.</p>
+				<img src="images/FAQ/offline_settings.png" alt="Windows offline settings search"
+					data-position="center center" />
+				<p>Opening this will bring up the settings.</p>
+				<img src="images/FAQ/offline_settings_basic.PNG" alt="basic offline settings"
+					data-position="center center" />
+				<p>Clicking the "wrench" icon will bring up the advanced settings. (Most Useful)</p>
+				<img src="images/FAQ/offline_settings_advanced.png" alt="advanced offline settings"
+					data-position="center center" />
+				<p>Here is an example of what the advanced setting might look like. Notice how it lists all of the
+					possible audio cards you have. In my case, I have:
+				</p>
+				<ul>
+					<li>HD webcam - Has a built in microphone</li>
+
+					<li>High Definition Audio Device - My default Windows 10 sound card</li>
+					<li>
+						Nahimic mirroring device - An add on sound card I have.
+					</li>
+					<li>HyperX Quadcast - My condenser microphone</li>
+
+					<li>Logitech G330 Headset - A USB Headset</li>
+				</ul>
+				<p>The ones which have a '+' or '-' next to them are devices which support both input and output. </p>
+				<p>The "Power" button indicates which device is selected, and also which sub-devices are selected within
+					the selected device.</p>
+				<p>A "Subdevice" indicates different input devices or capabilities, for most devices there will be one
+					output and one input device.</p>
+				<p>For DistanSing to work properly, only one master device should be chosen, and then only one output
+					and one input device chosen before DistanSing is started.</p>
+				<img src="images/FAQ/offline_settings_advanced_selected.png"
+					alt="advanced offline settings selection indicated" data-position="center center" />
+				<p>In my case, my Logitech G330 Is selected (The power button is lit up for the entire device). And its
+					respective input and output devices are selected as well.
+					If I wanted to select my HyperX Quadcast condenser microphone, I would <strong>click</strong> the
+					power button for that device as well as the respective input/output subdevices. I would also
+					<strong>deselect</strong>
+					the logitech headset and its subdevices. As shown below:
+				</p>
+				<img src="images/FAQ/offline_settings_advanced_hyperx.png"
+					alt="advanced offline settings selection hyperX" data-position="center center" />
+				<hr>
+				<u>
+					<h3><a id="audio" href="#audio">I cannot hear anything/others cannot hear me.</a></h3>
+				</u>
+				<p>The primary reason for audio/microphone not working is due to ASIO not being configured properly.
+					ASIO is
+					required for the low-latency
+					to work properly. Follow the instructions under <em><strong><a href="#howASIO">How do I edit ASIO
+								settings?</a></strong></em> to ensure
+					that your ASIO settings are correctly set up.
+				</p>
+				<hr>
+				<u>
+					<h3><a id="whatASIO" href="#whatASIO">What is ASIO?</a></h3>
+				</u>
+				<p><a href="https://www.steinberg.net/en/company/technologies.html" target="_blank">ASIO</a> (Audio
+					Stream Input/Output)
+					is a protocol allowing for ultra-fast communication
+					between a software application and a computer's sound card. It was developed by Steinberg in 1997.
+				</p>
+				<p>
+					The Audio Stream I/O API addresses
+					the areas of efficient audio processing, high data throughput, synchronization, low latency and
+					extensibility on the audio hardware side.
+					The interface is not bound to any fixed number of input and output channels (of course these numbers
+					are limited by the processing power
+					and data throughput of the computer system itself).
+					It puts no limitation on the sample rate (32 kHz to 96 kHz or higher), sample format (16, 24, 32 bit
+					or 32/64 bit floating point formats).
+					It takes advantage of today’s computer architectures for high data throughput (PCI, FireWire, USB).
+					It supports
+					sophisticated hardware solutions for additional audio processing but it remains simple in comparison
+					to other approaches.</p>
+				<hr>
+				<u>
+					<h3><a id="whyASIO" href="#whyASIO">Why is ASIO necessary?</a></h3>
+				</u>
+				<p>Through our <a
+						href="https://www.highfidelity.com/blog/how-much-latency-can-live-musicians-tolerate-da8e2ebe587a"
+						target="_blank">research</a>, we have found
+					that the maximum tolerable latency (the delay for sound to travel from sender to receiver) is
+					about 20 milliseconds.</p>
+				<p>Without ASIO, the absolute lowest latency we could achieve was somewhere between 100 - 150
+					milliseconds. This is not a problem
+					whatsoever in traditional conference call/audio streaming use cases. However, with our goal being
+					realtime audio, this was unacceptable.
+				</p>
+				<p>We discovered ASIO as a method for achieving low-latency. Our initial tests were promising, giving us
+					an optimistic 5 - 10 ms minimum latency!</p>
+				<p>The one problem with ASIO is that it completely hijacks the sound card, and thus presents undefined
+					behavior when other programs wish to playback audio or access the microphone. This was an acceptable
+					tradeoff for us.
+				</p>
+				<hr>
 
 			</div>
+		</section>
+	</div>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; 2021 DistanSing. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+	<!-- Footer -->
+	<footer id="footer" class="wrapper alt">
+		<div class="inner">
+			<ul class="menu">
+				<li>&copy; 2021 DistanSing. All rights reserved.</li>
+				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 
-	</body>
+</body>
+
 </html>
