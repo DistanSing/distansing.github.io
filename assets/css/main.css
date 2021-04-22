@@ -3924,3 +3924,7 @@ input, select, textarea {
 .cont{
 	display:flex;
 }
+
+.image{
+	margin: auto auto;
+}
