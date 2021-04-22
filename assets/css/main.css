@@ -3913,6 +3913,14 @@ input, select, textarea {
 	font-size: 1.5em;
 }
 
-.download{
-	/* text-decoration: underline; */
+.left{
+	padding:10px;
+}
+
+.right{
+	padding: 10px;
+} 
+
+.cont{
+	display:flex;
 }
